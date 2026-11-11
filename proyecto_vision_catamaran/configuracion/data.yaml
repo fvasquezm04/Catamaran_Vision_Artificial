@@ -1,0 +1,6 @@
+path: dataset_pelotas  # EDITAR: ruta al dataset YOLO (no incluido en el repo)
+train: train/images
+val: test/images
+nc: 1
+names:
+  0: "P"

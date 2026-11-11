@@ -1,0 +1,24 @@
+{
+    "clases": [
+        "amarillo",
+        "azul",
+        "naranja",
+        "rojo",
+        "verde"
+    ],
+    "cantidad_features": 124,
+    "tamano_normalizado": 128,
+    "factor_elipse": 0.86,
+    "saturacion_minima": 30,
+    "valor_minimo": 20,
+    "saturacion_reflejo": 55,
+    "valor_reflejo": 235,
+    "bins_h": 18,
+    "bins_s": 12,
+    "bins_v": 12,
+    "bins_lab": 12,
+    "mejor_modelo": "Random_Forest",
+    "macro_f1_validacion": 1.0,
+    "balanced_accuracy_validacion": 1.0,
+    "version_paquete": 1
+}

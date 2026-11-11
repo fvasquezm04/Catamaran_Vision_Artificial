@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visión del barco clasificador</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Proyecto de visión artificial</p>
+      <h1>Sistema de detección de pelotas</h1>
+    </div>
+    <div id="estado-pipeline" class="badge">Conectando...</div>
+  </header>
+
+  <main>
+    <section class="video-card">
+      <div class="section-title"><h2>Video procesado</h2><span id="fuente">Sin fuente</span></div>
+      <div class="video-box"><img id="video" src="/video" alt="Video procesado"></div>
+      <div class="metrics">
+        <span>FPS: <strong id="fps">0</strong></span>
+        <span>Latencia: <strong id="latencia">0 ms</strong></span>
+        <span>Visibles: <strong id="total-visibles">0</strong></span>
+        <span>Únicas: <strong id="total-unicas">0</strong></span>
+      </div>
+      <p id="detalle-modelo" class="model-info"></p>
+    </section>
+
+    <aside>
+      <section class="panel"><h2>Conteo por color</h2><div id="tarjetas" class="cards"></div></section>
+
+      <section class="panel controls">
+        <h2>Fuente de video</h2>
+        <button id="iniciar-gopro" class="gopro-button">Usar GoPro HERO10</button>
+        <p id="estado-camara" class="camera-status">GoPro sin iniciar</p>
+        <button id="iniciar-video" class="secondary wide">Probar con video de prueba</button>
+
+        <div class="button-row"><button id="reiniciar" class="secondary">Reiniciar conteos</button><button id="detener" class="danger">Detener</button></div>
+        <p id="mensaje" class="message"></p>
+      </section>
+
+      <section class="panel chat-panel">
+        <h2>Agente de IA</h2>
+        <div id="chat" class="chat"><div class="bubble assistant">Pregunta por conteos visibles, trayectorias únicas, FPS, latencia o un resumen.</div></div>
+        <form id="chat-form" class="chat-form"><input id="pregunta" autocomplete="off" placeholder="¿Cuántas pelotas rojas se ven?"><button type="submit">Preguntar</button></form>
+      </section>
+    </aside>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

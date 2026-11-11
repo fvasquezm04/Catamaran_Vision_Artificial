@@ -1,0 +1,19 @@
+numpy
+opencv-python
+pandas
+scikit-learn
+joblib
+matplotlib
+seaborn
+ultralytics
+# Requerido por ByteTrack. Instalarlo ANTES de conectarse al WiFi de la
+# GoPro: sin internet, ultralytics no puede instalarlo solo y el tracking falla.
+lap>=0.5.12
+# Servidor web y conexion con la camara
+fastapi
+uvicorn[standard]
+requests
+python-dotenv
+# Agente (opcional) y activacion del WiFi de la GoPro por Bluetooth
+openai
+bleak

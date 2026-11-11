@@ -1,0 +1,65 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  background: #07111f;
+  color: #ecf4ff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top, #12345a, #07111f 45%); }
+header { display: flex; justify-content: space-between; align-items: center; padding: 24px 32px; border-bottom: 1px solid #29415e; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 0; font-size: clamp(1.5rem, 3vw, 2.3rem); }
+.eyebrow { color: #65c9ff; text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; margin-bottom: 6px; }
+.badge { background: #26384c; padding: 9px 14px; border-radius: 999px; font-weight: 700; }
+.badge.active { background: #116149; color: #9dffd9; }
+main { display: grid; grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr); gap: 22px; padding: 24px 32px 36px; }
+.video-card, .panel { background: rgba(11, 29, 50, .92); border: 1px solid #29415e; border-radius: 18px; box-shadow: 0 16px 40px rgba(0,0,0,.22); }
+.video-card { padding: 18px; }
+.section-title { display: flex; justify-content: space-between; align-items: center; color: #b8d2ed; }
+.video-box { min-height: 420px; background: #02060b; border-radius: 12px; overflow: hidden; display: grid; place-items: center; }
+.video-box img { display: block; max-width: 100%; max-height: 72vh; object-fit: contain; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+.metrics span { background: #102944; border-radius: 10px; padding: 12px; text-align: center; }
+aside { display: grid; gap: 18px; align-content: start; }
+.panel { padding: 18px; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.color-card { display: flex; gap: 10px; align-items: center; background: #102944; border-radius: 12px; padding: 12px; border-left: 4px solid #9aa8b7; }
+.color-card p { margin: 3px 0; color: #b8d2ed; font-size: .9rem; }
+.color-card h3 { margin-bottom: 6px; }
+.dot { width: 16px; height: 16px; border-radius: 50%; background: #aaa; flex: 0 0 auto; }
+.amarillo { border-color: #ffd83d; } .amarillo .dot { background: #ffd83d; }
+.azul { border-color: #3f8cff; } .azul .dot { background: #3f8cff; }
+.naranja { border-color: #ff8a2a; } .naranja .dot { background: #ff8a2a; }
+.rojo { border-color: #ff4f54; } .rojo .dot { background: #ff4f54; }
+.verde { border-color: #37d67a; } .verde .dot { background: #37d67a; }
+label { display: block; color: #b8d2ed; margin-bottom: 7px; }
+.input-row, .button-row { display: flex; gap: 8px; }
+.button-row { margin-top: 10px; }
+input { min-width: 0; flex: 1; background: #07111f; color: white; border: 1px solid #365675; border-radius: 8px; padding: 10px; }
+button { border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 700; background: #2d8cff; color: white; }
+button.secondary { background: #31506f; } button.danger { background: #a8323a; }
+.message { min-height: 20px; margin: 12px 0 0; color: #91efc9; }
+.message.error { color: #ff9b9f; }
+.placeholder { color: #a9bed3; }
+@media (max-width: 950px) { main { grid-template-columns: 1fr; padding: 18px; } header { padding: 20px 18px; } }
+@media (max-width: 560px) { .metrics, .cards { grid-template-columns: 1fr 1fr; } .input-row, .button-row { flex-direction: column; } }
+
+
+.chat-panel { min-height: 310px; }
+.chat { height: 210px; overflow-y: auto; display: flex; flex-direction: column; gap: 9px; padding: 4px 3px 12px; }
+.bubble { max-width: 88%; padding: 10px 12px; border-radius: 12px; line-height: 1.35; white-space: pre-wrap; }
+.bubble.assistant { align-self: flex-start; background: #173858; color: #ddecfb; }
+.bubble.user { align-self: flex-end; background: #246fc1; color: white; }
+.bubble.error-bubble { align-self: flex-start; background: #6f2730; color: #ffd5d7; }
+.chat-form { display: flex; gap: 8px; border-top: 1px solid #29415e; padding-top: 12px; }
+.chat-form input { flex: 1; }
+
+
+.gopro-button { width: 100%; background: #1677d2; font-size: 1rem; padding: 12px; margin-bottom: 10px; }
+.camera-status { border-radius: 8px; padding: 9px 10px; background: #3a2730; color: #ffb7bc; font-size: .9rem; }
+.camera-status.connected { background: #153d32; color: #9dffd9; }
+.controls hr { border: 0; border-top: 1px solid #29415e; margin: 16px 0; }
+
+button.wide { width: 100%; margin-top: 4px; }
+button:disabled { opacity: .55; cursor: wait; }
+.model-info { margin: 10px 0 0; color: #8fb0cf; font-size: .85rem; }
